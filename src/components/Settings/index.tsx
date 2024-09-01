@@ -1,6 +1,15 @@
 import React from 'react';
-// import styles from './Settings.module.css';
+
+import { Сhapter } from 'components/Сhapter';
+import { ListSections } from 'components/ListSections';
+
+import { ListSectionsSettings } from 'constans/listSectionsData';
 
 export const Settings: React.FC = () => {
-  return null;
+  return (
+    <>
+      <Сhapter chapterName='Настройки' />
+      <ListSections list={ListSectionsSettings} />
+    </>
+  );
 };
