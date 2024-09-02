@@ -3,7 +3,7 @@ import styles from './Button.module.css';
 interface ButtonProps {
   children: React.ReactNode;
   onClick?: () => void;
-  variant: 'primary' | 'secondary' | 'danger';
+  variant: 'primary' | 'secondary';
   size?: 'small' | 'medium' | 'large';
   disabled?: boolean;
   type?: 'button' | 'submit' | 'reset';
@@ -31,7 +31,7 @@ export const Button: React.FC<ButtonProps> = ({
       className={classNames}
       disabled={disabled}
     >
-      <span>{children}</span>
+      {children}
     </button>
   );
 };

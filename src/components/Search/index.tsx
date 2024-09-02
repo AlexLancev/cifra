@@ -2,10 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { TextField, Box } from '@mui/material';
-// import { DateRangePicker } from '@mui/x-date-pickers-pro/DateRangePicker';
-// import { LocalizationProvider } from '@mui/x-date-pickers-pro/LocalizationProvider';
-// import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
-// import ruLocale from 'date-fns/locale/ru';
+import { DateRangeFieldValue } from 'components/UI/MuiDateRangePicker';
 
 import { Button } from 'components/Button';
 
@@ -37,7 +34,7 @@ export const Search = () => {
         component='fieldset'
         sx={{
           width: '300px',
-          margin: 'auto',
+          margin: '0 auto 15px',
         }}
       >
         <TextField
@@ -47,11 +44,13 @@ export const Search = () => {
           margin='normal'
           fullWidth
           sx={{
+            marginBottom: '0',
+            marginTop: '0',
             '& .MuiOutlinedInput-root.Mui-focused fieldset': {
-              borderColor: '#2D609B',
+              borderColor: '#3064A3',
             },
             '& .MuiInputLabel-root.Mui-focused': {
-              color: '#2D609B',
+              color: '#3064A3',
             },
           }}
           {...register('insideInvoiceNumber')}
@@ -69,12 +68,14 @@ export const Search = () => {
           margin='normal'
           fullWidth
           sx={{
+            marginBottom: '0',
+            marginTop: '15px',
             '& .MuiOutlinedInput-root.Mui-focused fieldset': {
-              color: '#ff9800',
-              borderColor: '#2D609B',
+              color: '#3064A3',
+              borderColor: '#3064A3',
             },
             '& .MuiInputLabel-root.Mui-focused': {
-              color: '#2D609B',
+              color: '#3064A3',
             },
           }}
           {...register('sender')}
@@ -90,12 +91,14 @@ export const Search = () => {
           margin='normal'
           fullWidth
           sx={{
+            marginBottom: '0',
+            marginTop: '15px',
             '& .MuiOutlinedInput-root.Mui-focused fieldset': {
-              color: '#2D609B',
-              borderColor: '#2D609B',
+              color: '#3064A3',
+              borderColor: '#3064A3',
             },
             '& .MuiInputLabel-root.Mui-focused': {
-              color: '#2D609B',
+              color: '#3064A3',
             },
           }}
           {...register('recipient')}
@@ -104,47 +107,23 @@ export const Search = () => {
           <span className={styles.SearchError}>{errors.recipient.message}</span>
         )}
 
-        {/* <LocalizationProvider dateAdapter={AdapterDateFns} locale={ruLocale}>
-          <DateRangePicker
-            startText='Дата начала'
-            endText='Дата окончания'
-            {...register('dateRange')}
-            renderInput={(startProps, endProps) => (
-              <>
-                <TextField
-                  {...startProps}
-                  margin='normal'
-                  variant='outlined'
-                  fullWidth
-                />
-                <TextField
-                  {...endProps}
-                  margin='normal'
-                  variant='outlined'
-                  fullWidth
-                />
-              </>
-            )}
-          />
-        </LocalizationProvider>
-        {errors.dateRange && (
-          <span className={styles.formError}>{errors.dateRange.message}</span>
-        )} */}
-
+        <DateRangeFieldValue />
+      </Box>
+      <div className={styles.SearchRowBtn}>
         <Button
           children={'Поиск'}
           variant={'primary'}
-          size={'small'}
+          size={'medium'}
           type={'submit'}
         />
         <Button
           children={'Отмена'}
-          variant={'primary'}
-          size={'small'}
+          variant={'secondary'}
+          size={'medium'}
           type={'button'}
           disabled
         />
-      </Box>
+      </div>
     </form>
   );
 };
