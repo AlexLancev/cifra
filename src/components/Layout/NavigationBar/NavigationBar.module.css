@@ -1,9 +1,35 @@
 .NavigationBar {}
 
-.NavigationBarList {}
+.NavigationBarList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+}
 
-.NavigationBarListItem {}
+.NavigationBarListItem {
+    text-align: center;
+}
 
-.NavigationBarItemLink {}
+.NavigationBarItemLink {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    gap: 2px;
+    font-size: 12px;
+    transition: color 0.3s ease;
+
+    &:disabled {
+        cursor: default;
+    }
+    
+    &:not(:disabled) {
+        color: var(--text-black-200);
+    }
+    
+    &:hover:not(:disabled) {
+        color: var(--text-black-700);
+    }
+
+}
 
 .NavigationBarItemLinkDisabled {}

@@ -10,7 +10,7 @@ interface ListSectionsProps {
 }
 
 export const ListSections: React.FC<ListSectionsProps> = ({ list }) => {
-  if (!list || list.length === 0) null;
+  if (!list || list.length === 0) return null;
 
   return (
     <ul className={styles.ListSections}>
@@ -21,7 +21,14 @@ export const ListSections: React.FC<ListSectionsProps> = ({ list }) => {
               className={styles.ListSectionsLink}
               to={item.toLink}
               style={
-                item.icon ? { backgroundImage: `url(${item.icon})` } : undefined
+                item.icon
+                  ? {
+                      backgroundImage: `url(${item.icon})`,
+                      backgroundRepeat: 'no-repeat',
+                      backgroundPosition: '8px 50%',
+                      paddingLeft: '40px',
+                    }
+                  : undefined
               }
             >
               {item.chapter}
@@ -30,7 +37,14 @@ export const ListSections: React.FC<ListSectionsProps> = ({ list }) => {
             <span
               className={styles.ListSectionsLink}
               style={
-                item.icon ? { backgroundImage: `url(${item.icon})` } : undefined
+                item.icon
+                  ? {
+                      backgroundImage: `url(${item.icon})`,
+                      backgroundRepeat: 'no-repeat',
+                      backgroundPosition: '8px 50%',
+                      paddingLeft: '40px',
+                    }
+                  : undefined
               }
             >
               {item.chapter}

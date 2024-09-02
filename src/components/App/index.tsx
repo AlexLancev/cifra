@@ -3,7 +3,13 @@ import React from 'react';
 import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
 
 import { Layout } from 'components/Layout';
-import { HomePage } from 'pages/HomePage';
+import { MenuPage } from 'pages/MenuPage';
+import { SettingsPage } from 'pages/SettingsPage';
+import { TasksPage } from 'pages/TasksPage';
+import { AccountingProductionPage } from 'pages/AccountingProductionPage';
+import { InternalInvoicesSearchPage } from 'pages/InternalInvoicesSearchPage';
+
+import { InternalInvoicesSearchListPage } from 'pages/InternalInvoicesSearchListPage';
 
 import { paths } from '../../paths';
 
@@ -23,8 +29,21 @@ export const App = () => {
       <ScrollToTop />
       <Routes>
         <Route path={`${paths.home}`} element={<Layout />}>
-          <Route index element={<HomePage />} />
-          {/* <Route path={`${paths.teamPage}`} element={<TeamPage />} /> */}
+          <Route index element={<MenuPage />} />
+          <Route path={`${paths.settingsPage}`} element={<SettingsPage />} />
+          <Route path={`${paths.tasksPage}`} element={<TasksPage />} />
+          <Route
+            path={`${paths.accountingProductionPage}`}
+            element={<AccountingProductionPage />}
+          />
+          <Route
+            path={`${paths.internalInvoicesSearchPage}`}
+            element={<InternalInvoicesSearchPage />}
+          />
+          <Route
+            path={`${paths.internalInvoicesSearchListPage}`}
+            element={<InternalInvoicesSearchListPage />}
+          />
         </Route>
       </Routes>
     </BrowserRouter>

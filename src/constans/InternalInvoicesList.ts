@@ -1,4 +1,4 @@
-import { InternalInvoicesListType } from 'types/InternalInvoicesListType';
+import { InternalInvoicesListType } from 'types/api/InternalInvoicesListType';
 
 export const internalInvoicesList: InternalInvoicesListType[] = [
   {

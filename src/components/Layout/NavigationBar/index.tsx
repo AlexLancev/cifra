@@ -1,6 +1,10 @@
 import React from 'react';
 import { NavLink, useNavigate, useLocation } from 'react-router-dom';
 
+import BurgerIcon from './img/svg/burger.svg?react';
+import ScanIcon from './img/svg/scan.svg?react';
+import BackIcon from './img/svg/back.svg?react';
+
 import styles from './NavigationBar.module.css';
 
 export const NavigationBar: React.FC = () => {
@@ -23,11 +27,15 @@ export const NavigationBar: React.FC = () => {
       <ul className={styles.NavigationBarList}>
         <li className={styles.NavigationBarListItem}>
           <NavLink className={styles.NavigationBarItemLink} to='/'>
-            Меню
+            <BurgerIcon width={24} height={24} />
+            <span>Меню</span>
           </NavLink>
         </li>
         <li className={styles.NavigationBarListItem}>
-          <span className={styles.NavigationBarItemLink}>Сканер</span>
+          <button disabled className={styles.NavigationBarItemLink}>
+            <ScanIcon width={24} height={24} />
+            <span>Сканер</span>
+          </button>
         </li>
         <li className={styles.NavigationBarListItem}>
           <button
@@ -36,7 +44,8 @@ export const NavigationBar: React.FC = () => {
             disabled={isHomePage}
             type='button'
           >
-            Назад
+            <BackIcon width={24} height={24} />
+            <span>Назад</span>
           </button>
         </li>
       </ul>

@@ -17,9 +17,12 @@ export const InternalInvoicesSearchList: React.FC = () => {
           <span className={styles.SearchListNumber}>
             {item.internalInvoicesNumber}
           </span>
-          <b className={styles.SearchListCat}>{item.sender}</b>
-          <b className={styles.SearchListCat}>{item.recipient}</b>
-          <b className={styles.SearchListCat}>{item.dateOfIssue}</b>
+          Отправитель:<b className={styles.SearchListCat}>{item.sender}</b>
+          <br />
+          Получатель:<b className={styles.SearchListCat}>{item.recipient}</b>
+          <br />
+          Дата выдачи:<b className={styles.SearchListCat}>{item.dateOfIssue}</b>
+          <br />
         </li>
       ))}
     </ul>

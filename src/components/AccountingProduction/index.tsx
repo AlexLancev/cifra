@@ -13,4 +13,3 @@ export const AccountingProduction: React.FC = () => {
     </>
   );
 };
-

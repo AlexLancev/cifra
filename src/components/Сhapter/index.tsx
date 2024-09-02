@@ -17,7 +17,8 @@ export const Сhapter: React.FC<ChapterTypePorps> = ({
     <>
       <b className={styles.СhapterName}>{chapterName}</b>
       {isVisibleButton && (
-        <>
+        <div className={styles.СhapterRowBtn}>
+          <b className={styles.СhapterName}>{chapterName}</b>
           <Button
             children={'Поиск'}
             variant={'primary'}
@@ -31,7 +32,7 @@ export const Сhapter: React.FC<ChapterTypePorps> = ({
             type={'button'}
             disabled
           />
-        </>
+        </div>
       )}
     </>
   );

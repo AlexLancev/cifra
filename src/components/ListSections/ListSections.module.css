@@ -1,5 +1,19 @@
-.ListSections {}
+.ListSections {
+    padding: 10px 0;
+}
 
-.ListSectionsItem {}
+.ListSectionsItem {
+    font-size: 14px;
+}
 
-.ListSectionsLink {}
+.ListSectionsLink {
+    display: flex;
+    padding: 8px;
+    color: var(--text-black-200);
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    &:hover:not(span) {
+        background-color: var(--background-gray-100);
+        color: var(--text-black-700);
+    }
+}

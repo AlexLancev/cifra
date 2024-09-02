@@ -1,1 +1,13 @@
-.СhapterName {}
+.СhapterName {
+    display: flex;
+    padding: 8px;
+    background-color: var(--background-blue-300);
+    font-size: 14px;
+}
+
+.СhapterRowBtn {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
