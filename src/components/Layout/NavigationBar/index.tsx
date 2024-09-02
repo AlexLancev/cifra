@@ -34,6 +34,7 @@ export const NavigationBar: React.FC = () => {
             className={`${styles.NavigationBarItemLink} ${isHomePage ? styles.NavigationBarItemLinkDisabled : ''}`}
             onClick={handleBackNavigation}
             disabled={isHomePage}
+            type='button'
           >
             Назад
           </button>

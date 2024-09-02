@@ -10,7 +10,7 @@ interface ListSectionsProps {
 }
 
 export const ListSections: React.FC<ListSectionsProps> = ({ list }) => {
-  if (!list || list.length === 0) return null;
+  if (!list || list.length === 0) null;
 
   return (
     <ul className={styles.ListSections}>

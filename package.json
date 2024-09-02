@@ -12,7 +12,11 @@
     "formater": "prettier --write 'src/**/*.{js,jsx,ts,tsx,json,css,scss,md}'"
   },
   "dependencies": {
+    "@date-io/date-fns": "^3.0.0",
     "@hookform/resolvers": "^3.9.0",
+    "@mui/material": "^6.0.1",
+    "@mui/x-date-pickers-pro": "^7.15.0",
+    "date-fns": "^3.6.0",
     "dotenv": "^16.4.5",
     "lodash.debounce": "^4.0.8",
     "paths": "^0.1.1",
