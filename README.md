@@ -1,50 +1,21 @@
-# React + TypeScript + Vite
+# Cifra izh
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Описание
+Этот проект создан с использованием современных технологий для обеспечения удобства и гибкости разработки, проект сделан таким образом, что его можно легко масштабировать дальше.
 
-Currently, two official plugins are available:
+## Используемые технологии и инструменты
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React**: Основной фреймворк для разработки пользовательского интерфейса.
+- **TypeScript**: Используется для типизации кода и повышения его надежности.
+- **Linter**: Настроен для поддержания качества кода.
+- **Prettier**: Для форматирования кода.
+- **React Hook Form**: Используется для управления состоянием и валидации полей формы.
+- **Yup**: Библиотека для схемной валидации данных формы.
+- **Material-UI**: Применяется для создания полей формы и других компонентов интерфейса.
+- **Компоненты кнопок**: Вынесены в отдельный компонент для переиспользования.
+- **SVG иконки**: Используются как компоненты.
+- **CSS Modules**: Для модульной стилизации компонентов.
 
-## Expanding the ESLint configuration
+## Деплой
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+Проект доступен по следующему URL: [https://cifra-izh.vercel.app/](https://cifra-izh.vercel.app/)

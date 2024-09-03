@@ -1,7 +1,8 @@
 import React from 'react';
 
 import { Сhapter } from 'components/Сhapter';
-import { InternalInvoicesSearchList } from 'components/InternalInvoicesSearchList';
+
+import { InternalInvoicesSearchList } from './InternalInvoicesSearchList';
 
 import styles from './InternalInvoices.module.css';
 

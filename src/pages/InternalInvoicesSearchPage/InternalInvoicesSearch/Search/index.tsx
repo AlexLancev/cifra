@@ -8,7 +8,7 @@ import { DateRangeFieldValue } from 'components/UI/MuiDateRangeFieldValue';
 import { CustomTextField } from 'components/UI/TextFieldInput';
 import { FormValues, Schema } from 'utils/validationSchema';
 
-import styles from '../../../../components/Search/Search.module.css';
+import styles from './Search.module.css';
 
 export const Search = () => {
   const navigate = useNavigate();

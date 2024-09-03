@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { InternalInvoicesSearch } from 'components/InternalInvoicesSearch';
+import { InternalInvoicesSearch } from 'pages/InternalInvoicesSearchPage/InternalInvoicesSearch';
 
 export const InternalInvoicesSearchPage: React.FC = () => {
   return <InternalInvoicesSearch />;

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Сhapter } from 'components/Сhapter';
-import { Search } from 'components/Search';
+import { Search } from 'pages/InternalInvoicesSearchPage/InternalInvoicesSearch/Search';
 
 export const InternalInvoicesSearch: React.FC = () => {
   return (
