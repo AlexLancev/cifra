@@ -3,8 +3,8 @@ import styles from './Button.module.css';
 interface ButtonProps {
   children: React.ReactNode;
   onClick?: () => void;
-  variant: 'primary' | 'secondary';
-  size?: 'small' | 'medium' | 'large';
+  variant: 'primary' | 'outlined';
+  size?: 'small' | 'medium' | 'large' | 'extra-large';
   disabled?: boolean;
   type?: 'button' | 'submit' | 'reset';
 }

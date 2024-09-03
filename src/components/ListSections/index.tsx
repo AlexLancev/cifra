@@ -17,36 +17,13 @@ export const ListSections: React.FC<ListSectionsProps> = ({ list }) => {
       {list.map((item: ListSectionsType, index: number) => (
         <li className={styles.ListSectionsItem} key={item.id || index}>
           {item.toLink ? (
-            <NavLink
-              className={styles.ListSectionsLink}
-              to={item.toLink}
-              style={
-                item.icon
-                  ? {
-                      backgroundImage: `url(${item.icon})`,
-                      backgroundRepeat: 'no-repeat',
-                      backgroundPosition: '8px 50%',
-                      paddingLeft: '40px',
-                    }
-                  : undefined
-              }
-            >
+            <NavLink className={styles.ListSectionsLink} to={item.toLink}>
+              {item.icon && <img src={item.icon} alt='' aria-hidden />}
               {item.chapter}
             </NavLink>
           ) : (
-            <span
-              className={styles.ListSectionsLink}
-              style={
-                item.icon
-                  ? {
-                      backgroundImage: `url(${item.icon})`,
-                      backgroundRepeat: 'no-repeat',
-                      backgroundPosition: '8px 50%',
-                      paddingLeft: '40px',
-                    }
-                  : undefined
-              }
-            >
+            <span className={styles.ListSectionsLink}>
+              {item.icon && <img src={item.icon} alt='' aria-hidden />}
               {item.chapter}
             </span>
           )}

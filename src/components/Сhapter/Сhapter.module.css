@@ -1,17 +1,18 @@
 .СhapterName {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 .СhapterRowBtn {
-    margin-left: auto;
-    display: flex;
-    align-items: center;
-    gap: 7px;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 7px;
 }
 
 .ChapterRow {
-    display: flex;
-    align-items: center;
-    padding: 8px;
-    background-color: var(--background-blue-300);
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px;
+  background-color: var(--background-blue-300);
 }

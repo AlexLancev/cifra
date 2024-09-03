@@ -1,11 +1,11 @@
 import { useNavigate } from 'react-router-dom';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { SubmitHandler, useForm } from 'react-hook-form';
-import { TextField, Box } from '@mui/material';
+import { Box } from '@mui/material';
+
+import { Button } from 'components/UI/Button';
 import { DateRangeFieldValue } from 'components/UI/MuiDateRangeFieldValue';
-
-import { Button } from 'components/Button';
-
+import { CustomTextField } from 'components/UI/TextFieldInput';
 import { FormValues, Schema } from 'utils/validationSchema';
 
 import styles from './Search.module.css';
@@ -37,92 +37,39 @@ export const Search = () => {
           margin: '0 auto 15px',
         }}
       >
-        <TextField
+        <CustomTextField
           label='Номер ВЗН'
           type='text'
-          variant='outlined'
-          margin='normal'
-          fullWidth
-          sx={{
-            marginBottom: '0',
-            marginTop: '0',
-            '& .MuiOutlinedInput-root.Mui-focused fieldset': {
-              borderColor: '#3064A3',
-            },
-            '& .MuiInputLabel-root.Mui-focused': {
-              color: '#3064A3',
-            },
-            '& .MuiInputLabel-root': { color: '#333333' },
-          }}
-          {...register('insideInvoiceNumber')}
+          register={register('insideInvoiceNumber')}
+          error={errors.insideInvoiceNumber}
         />
-        {errors.insideInvoiceNumber && (
-          <span className={styles.SearchError}>
-            {errors.insideInvoiceNumber.message}
-          </span>
-        )}
 
-        <TextField
+        <CustomTextField
           label='Отправитель'
           type='text'
-          variant='outlined'
-          margin='normal'
-          fullWidth
-          sx={{
-            marginBottom: '0',
-            marginTop: '15px',
-            '& .MuiOutlinedInput-root.Mui-focused fieldset': {
-              color: '#3064A3',
-              borderColor: '#3064A3',
-            },
-            '& .MuiInputLabel-root.Mui-focused': {
-              color: '#3064A3',
-            },
-            '& .MuiInputLabel-root': { color: '#333333' },
-          }}
-          {...register('sender')}
+          register={register('sender')}
+          error={errors.sender}
         />
-        {errors.sender && (
-          <span className={styles.SearchError}>{errors.sender.message}</span>
-        )}
 
-        <TextField
+        <CustomTextField
           label='Получатель'
           type='text'
-          variant='outlined'
-          margin='normal'
-          fullWidth
-          sx={{
-            marginBottom: '0',
-            marginTop: '15px',
-            '& .MuiOutlinedInput-root.Mui-focused fieldset': {
-              color: '#3064A3',
-              borderColor: '#3064A3',
-            },
-            '& .MuiInputLabel-root.Mui-focused': {
-              color: '#3064A3',
-            },
-            '& .MuiInputLabel-root': { color: '#333333' },
-          }}
-          {...register('recipient')}
+          register={register('recipient')}
+          error={errors.recipient}
         />
-        {errors.recipient && (
-          <span className={styles.SearchError}>{errors.recipient.message}</span>
-        )}
-
         <DateRangeFieldValue />
       </Box>
       <div className={styles.SearchRowBtn}>
         <Button
           children={'Поиск'}
           variant={'primary'}
-          size={'medium'}
+          size={'extra-large'}
           type={'submit'}
         />
         <Button
           children={'Отмена'}
-          variant={'secondary'}
-          size={'medium'}
+          variant={'outlined'}
+          size={'extra-large'}
           type={'button'}
           disabled
         />

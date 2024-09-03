@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink, useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 import BurgerIcon from './img/svg/burger.svg?react';
 import ScanIcon from './img/svg/scan.svg?react';
@@ -19,6 +19,12 @@ export const NavigationBar: React.FC = () => {
     }
   };
 
+  const handleBackHome = () => {
+    if (!isHomePage) {
+      navigate('/');
+    }
+  };
+
   return (
     <nav
       className={styles.NavigationBar}
@@ -26,10 +32,15 @@ export const NavigationBar: React.FC = () => {
     >
       <ul className={styles.NavigationBarList}>
         <li className={styles.NavigationBarListItem}>
-          <NavLink className={styles.NavigationBarItemLink} to='/'>
+          <button
+            className={styles.NavigationBarItemLink}
+            onClick={handleBackHome}
+            disabled={isHomePage}
+            type='button'
+          >
             <BurgerIcon width={24} height={24} />
-            <span>Меню</span>
-          </NavLink>
+            Меню
+          </button>
         </li>
         <li className={styles.NavigationBarListItem}>
           <button disabled className={styles.NavigationBarItemLink}>
@@ -39,7 +50,7 @@ export const NavigationBar: React.FC = () => {
         </li>
         <li className={styles.NavigationBarListItem}>
           <button
-            className={`${styles.NavigationBarItemLink} ${isHomePage ? styles.NavigationBarItemLinkDisabled : ''}`}
+            className={styles.NavigationBarItemLink}
             onClick={handleBackNavigation}
             disabled={isHomePage}
             type='button'
