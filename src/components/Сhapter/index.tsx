@@ -1,6 +1,10 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import { Button } from 'components/Button';
+
+import IconSettings from '../../assets/img/svg/settungsSearch.svg?react';
+import IconCreate from '../../assets/img/svg/create.svg?react';
 
 import styles from './Сhapter.module.css';
 
@@ -13,27 +17,35 @@ export const Сhapter: React.FC<ChapterTypePorps> = ({
   chapterName,
   isVisibleButton,
 }) => {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate(-1);
+  };
+
   return (
-    <>
-      <b className={styles.СhapterName}>{chapterName}</b>
-      {isVisibleButton && (
-        <div className={styles.СhapterRowBtn}>
+    <div className={styles.ChapterRow}>
+      {isVisibleButton ? (
+        <>
           <b className={styles.СhapterName}>{chapterName}</b>
-          <Button
-            children={'Поиск'}
-            variant={'primary'}
-            size={'small'}
-            type={'button'}
-          />
-          <Button
-            children={'Создать'}
-            variant={'primary'}
-            size={'small'}
-            type={'button'}
-            disabled
-          />
-        </div>
+          <div className={styles.СhapterRowBtn}>
+            <Button
+              variant={'primary'}
+              size={'small'}
+              type={'button'}
+              onClick={handleClick}
+            >
+              <IconSettings width={14} height={14} />
+              Поиск
+            </Button>
+            <Button variant={'primary'} size={'small'} type={'button'} disabled>
+              <IconCreate width={14} height={14} />
+              Создать
+            </Button>
+          </div>
+        </>
+      ) : (
+        <b className={styles.СhapterName}>{chapterName}</b>
       )}
-    </>
+    </div>
   );
 };

@@ -7,8 +7,8 @@ export const Layout = () => {
     <>
       <main className='main'>
         <Outlet />
+        <NavigationBar />
       </main>
-      <NavigationBar />
     </>
   );
 };

@@ -10,18 +10,18 @@ export const InternalInvoicesSearchList: React.FC = () => {
   return (
     <ul className={`${styles.internalInvoicesSearchList} ${styles.SearchList}`}>
       {internalInvoicesList.map((item, index: number) => (
-        <li
-          className={styles.internalInvoicesSearchListItem}
-          key={item.id || index}
-        >
+        <li className={styles.SearchListItem} key={item.id || index}>
           <span className={styles.SearchListNumber}>
             {item.internalInvoicesNumber}
           </span>
-          Отправитель:<b className={styles.SearchListCat}>{item.sender}</b>
+          <b className={styles.SearchListCat}>Отправитель:</b>
+          {item.sender}
           <br />
-          Получатель:<b className={styles.SearchListCat}>{item.recipient}</b>
+          <b className={styles.SearchListCat}>Получатель:</b>
+          {item.recipient}
           <br />
-          Дата выдачи:<b className={styles.SearchListCat}>{item.dateOfIssue}</b>
+          <b className={styles.SearchListCat}>Дата выдачи:</b>
+          {item.dateOfIssue}
           <br />
         </li>
       ))}

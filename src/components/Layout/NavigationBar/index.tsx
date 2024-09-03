@@ -34,7 +34,7 @@ export const NavigationBar: React.FC = () => {
         <li className={styles.NavigationBarListItem}>
           <button disabled className={styles.NavigationBarItemLink}>
             <ScanIcon width={24} height={24} />
-            <span>Сканер</span>
+            Сканер
           </button>
         </li>
         <li className={styles.NavigationBarListItem}>
@@ -45,7 +45,7 @@ export const NavigationBar: React.FC = () => {
             type='button'
           >
             <BackIcon width={24} height={24} />
-            <span>Назад</span>
+            Назад
           </button>
         </li>
       </ul>

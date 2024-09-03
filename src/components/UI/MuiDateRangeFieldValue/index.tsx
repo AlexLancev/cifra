@@ -17,11 +17,21 @@ export const DateRangeFieldValue = () => {
     <LocalizationProvider dateAdapter={AdapterDayjs}>
       <DemoContainer
         components={['SingleInputDateRangeField', 'SingleInputDateRangeField']}
-        sx={{ marginTop: '15px' }}
+        sx={{
+          marginTop: '15px',
+          '& .MuiOutlinedInput-root.Mui-focused fieldset': {
+            color: '#3064A3',
+            borderColor: '#3064A3',
+          },
+          '& .MuiInputLabel-root': { color: '#333333' },
+          '& .MuiInputLabel-root.Mui-focused': {
+            color: '#3064A3',
+          },
+        }}
       >
         <SingleInputDateRangeField
           label='Дата принятия (период)'
-          defaultValue={[today, today.add(14, 'day')]}
+          defaultValue={[today, today.add(30, 'day')]}
         />
       </DemoContainer>
     </LocalizationProvider>

@@ -20,10 +20,18 @@
 
   --text-black-100: #2e2e2e;
   --text-black-200: #43444B;
+  --text-black-300: #333333;
   --text-black-700: #000000;
   --text-white: #FFFFFF;
 
   --accent-300: #73BBEB;
+}
+
+#root,
+.main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 html {

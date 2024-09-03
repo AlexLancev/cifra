@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { TextField, Box } from '@mui/material';
-import { DateRangeFieldValue } from 'components/UI/MuiDateRangePicker';
+import { DateRangeFieldValue } from 'components/UI/MuiDateRangeFieldValue';
 
 import { Button } from 'components/Button';
 
@@ -52,6 +52,7 @@ export const Search = () => {
             '& .MuiInputLabel-root.Mui-focused': {
               color: '#3064A3',
             },
+            '& .MuiInputLabel-root': { color: '#333333' },
           }}
           {...register('insideInvoiceNumber')}
         />
@@ -77,6 +78,7 @@ export const Search = () => {
             '& .MuiInputLabel-root.Mui-focused': {
               color: '#3064A3',
             },
+            '& .MuiInputLabel-root': { color: '#333333' },
           }}
           {...register('sender')}
         />
@@ -100,6 +102,7 @@ export const Search = () => {
             '& .MuiInputLabel-root.Mui-focused': {
               color: '#3064A3',
             },
+            '& .MuiInputLabel-root': { color: '#333333' },
           }}
           {...register('recipient')}
         />
