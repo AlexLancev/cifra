@@ -29,11 +29,7 @@ export const Сhapter: React.FC<ChapterTypePorps> = ({
     <div className={styles.ChapterRow}>
       {isVisibleIcon && (
         <button type='button' title='Закрыть форму поиска' disabled>
-          <IconClose
-            width={20}
-            height={22}
-            style={{ verticalAlign: 'middle' }}
-          />
+          <IconClose width={20} height={22} />
         </button>
       )}
       {isVisibleButton ? (
