@@ -26,7 +26,7 @@ export const DateRangeFieldValue = () => {
         <SingleInputDateRangeField
           label='Дата принятия (период)'
           defaultValue={[today, today.add(30, 'day')]}
-          format={'DD.MM.YYYY'}
+          format='DD.MM.YYYY'
         />
       </DemoContainer>
     </LocalizationProvider>
